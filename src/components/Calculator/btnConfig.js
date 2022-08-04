@@ -7,83 +7,83 @@ import {
 
 export const btns = [
     {
-        display: 'C',
-        action: BTN_DELETE
+        type: BTN_DELETE,
+        payload: 'C',
     },
     {
-        display: '7',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '7',
     },
     {
-        display: '8',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '8',
     },
     {
-        display: '9',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '9',
     },
     {
-        display: '*',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '*',
     },
     {
-        display: '-',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '-',
     },
     {
-        display: '4',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '4',
     },
     {
-        display: '5',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '5',
     },
     {
-        display: '6',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '6',
     },
     {
-        display: '\\',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '\\',
     },
     {
-        display: '+',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '+',
     },
     {
-        display: '1',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '1',
     },
     {
-        display: '2',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '2',
     },
     {
-        display: '3',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '3',
     },
     {
-        display: '=',
-        action: BTN_CALC
+        type: BTN_CALC,
+        payload: '=',
     },
     {
-        display: '.',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '.',
     },
     {
-        display: '(',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '(',
     },
     {
-        display: '0',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: '0',
     },
     {
-        display: ')',
-        action: BTN_ADD
+        type: BTN_ADD,
+        payload: ')',
     },
     {
-        display: 'CE',
-        action: BTN_BACKSP
+        type: BTN_BACKSP,
+        payload: 'CE',
     },
 ]
