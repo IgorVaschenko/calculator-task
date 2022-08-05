@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const WrapperPage = styled.div`
 width: 100%;
-height: 600px;
+${'' /* height: 600px; */}
 display: grid;
 grid-template-areas:
     'header header'
