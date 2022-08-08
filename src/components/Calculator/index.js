@@ -11,10 +11,8 @@ const Calculator = () => {
     const [val, setVal] = useState('0')
     const dispatch = useDispatch()
     const fieldValue = useSelector(state => state.operations.fieldValue)
-    console.log('fieldValue>>>>>', fieldValue);
 
     const handleClick = btn => {
-        console.log(btn);
         dispatch(btn)
     }
 
@@ -27,10 +25,10 @@ const Calculator = () => {
                         {btn.payload}
                     </CalcButton>
                 ))}
+                <EqualButton onClick={() => handleClick(btnEqual)}>
+                    {btnEqual.payload}
+                </EqualButton>
             </ButtonsWrapper>
-            <EqualButton onClick={() => handleClick(btnEqual)}>
-                {btnEqual.payload}
-            </EqualButton>
         </CalculatorWrapper>
     );
 }

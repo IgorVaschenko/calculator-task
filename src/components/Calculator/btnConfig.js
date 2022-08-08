@@ -87,6 +87,10 @@ export const btns = [
         type: BTN_BACKSP,
         payload: 'CE',
     },
+    {
+        type: BTN_ADD,
+        payload: '%',
+    },
 ]
 
 export const btnEqual = {

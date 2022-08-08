@@ -1,4 +1,6 @@
-import { equal } from './equal'
+import { equal } from './calculationValue/equal'
 
 
-export default *
+export {
+    equal
+}

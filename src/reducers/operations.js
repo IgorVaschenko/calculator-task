@@ -1,18 +1,12 @@
 import {
-    addToExpression,
-    calcExpression,
-    backspFromExpression,
-    deleteExpression
-} from "@/actions";
-
-import {
     BTN_ADD,
     BTN_BACKSP,
     BTN_CALC,
     BTN_DELETE,
     BTN_SIGN_CHANGE
 } from "@/constants";
-import equal from "@/utils/equal";
+import { chechkingAddValue, chechkingBtnCalc } from "@/utils/checksForReducers/chechkingAddValue";
+import equal from "@/utils/calculationValue/equal";
 
 
 const initialState = {
@@ -24,9 +18,7 @@ const operations = (state = initialState, { type, payload }) => {
     console.log({ type, payload });
     switch (type) {
         case BTN_ADD:
-            if (payload === '0' && state.fieldValue[0] === 0 && state.fieldValue[1] !== '.') return state
-            // if (payload === '.' && state.fieldValue.includes('.')) return state
-            return {
+            return chechkingAddValue(state, payload) || {
                 ...state,
                 fieldValue: [...state.fieldValue.filter((item, index) => !(item === 0 && index === 0)), ...payload]
             }
@@ -50,10 +42,10 @@ const operations = (state = initialState, { type, payload }) => {
                     ['-', ...state.fieldValue]
             }
         case BTN_CALC:
-            return {
+            return chechkingBtnCalc(state) || {
                 ...state,
                 history: [...state.history, [...state.fieldValue].join('')],
-                fieldValue: [equal(state.fieldValue)],
+                fieldValue: equal(state.fieldValue),
             }
         default:
             return state
