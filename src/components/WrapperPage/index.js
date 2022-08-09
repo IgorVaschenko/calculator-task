@@ -1,11 +1,11 @@
-import { WrapperPage } from "./components"
+import { HomeWrapperPage } from "./components"
 import React from 'react';
 
 
 export default ({ children }) => {
     return (
-        <WrapperPage>
+        <HomeWrapperPage>
             {children}
-        </WrapperPage>
+        </HomeWrapperPage>
     )
 }

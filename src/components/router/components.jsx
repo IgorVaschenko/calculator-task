@@ -20,13 +20,7 @@ export const Lis = styled.li`
     display: inline-block;
     color: white;
     margin: 0 2vh;
-`
-
-export const LinkUp = styled(Link)`
-    textDecoration: none;
-    color: 'white';
-
-    & : hover {
+    &:hover(Link) {
         textDecoration: underline;
     }
 `

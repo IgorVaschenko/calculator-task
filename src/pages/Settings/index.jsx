@@ -1,21 +1,20 @@
 import React from 'react'
 
 import { PageLayout } from '@/layouts'
-
 import WrapperPage from '@/components/WrapperPage'
 import Header from '@/components/Header'
-import Loader from '@/components/Loader'
-import Calculator from '@/components/Calculator'
 import Footer from '@/components/Footer'
+import ControlPanel from '@/components/ControlPanel/Calculator'
 
 export default () => {
   return (
     <WrapperPage>
       <Header />
-      <Calculator />
+      <ControlPanel />
       <Footer />
     </WrapperPage>
   )
 }
+
     // <PageLayout>
     // </PageLayout>

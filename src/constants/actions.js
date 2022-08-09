@@ -8,5 +8,6 @@ export const BTN_SIGN_CHANGE = 'BTN_SIGN_CHANGE'
 
 
 export const ADD_TO_HISTORY = 'ADD_TO_HISTORY'
+export const CLEAR_HISTORY = 'CLEAR_HISTORY'
 
 

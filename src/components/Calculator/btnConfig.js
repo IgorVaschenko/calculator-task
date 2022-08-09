@@ -3,7 +3,8 @@ import {
     BTN_DELETE,
     BTN_CALC,
     BTN_BACKSP,
-    BTN_SIGN_CHANGE
+    BTN_SIGN_CHANGE,
+    CLEAR_HISTORY
 } from "@/constants";
 
 export const btns = [
@@ -91,6 +92,10 @@ export const btns = [
         type: BTN_ADD,
         payload: '%',
     },
+    {
+        type: CLEAR_HISTORY,
+        payload: 'MC',
+    },
 ]
 
 export const btnEqual = {
@@ -98,4 +103,3 @@ export const btnEqual = {
     payload: '=',
 }
 
-///%

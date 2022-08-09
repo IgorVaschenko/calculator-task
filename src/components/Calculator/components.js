@@ -1,52 +1,54 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const CalculatorWrapper = styled.div`
-    grid-area: calculator;
+
+export const CalcAndHistory = styled.div`
     background-color: white;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
+    height: 80vh;
+    flex-direction: row;
 `
-// export const CalcResult = styled.div`
-//     margin: 0 10px;
-//     border-bottom: 1px solid black;
-//     font-size: 2rem;
-//     width: 100%;
-//     text-align: right;
-//     transform-origin: right bottom;
-//     transition: transform 0.3s ease;
 
-// `
-
+export const CalculatorWrapper = styled.div`
+    flex-grow: 3;
+    background-color: white;
+    flex-direction: column;
+`
 export const ButtonsWrapper = styled.div`
-    width: 100%;
-    height: 75%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 40px;
-    grid-row-gap: 20px;
+    width: 65vw;
+    display: flex;
+    flex-wrap: wrap; 
+    align-content: flex-end;
+    justify-content: flex-end;
+    margin: 2vw auto;
 `
 
 export const CalcButton = styled.button`
-    border: 1px solid gray;
-    height: 100px;
-    width: 100px;
-    border-radius: 15px;
-    font-size: 2rem;
+    width: 5vw;   
+    height: 5vw;
+    margin: 1vw 3.8vw;
+    border-radius: 1vw;
+    font-size: 2vw;
     font-weight: 500; 
-    background-color: white;
+    background-color: #F2F2F2;
     cursor: pointer;
+    border: 1px solid #CBCBCB;
+    &: hover{   
+        background-color: #B5B5B5;
+    }
 `
 
 export const EqualButton = styled.button` 
-    border: 1px solid gray;
-    height: 100px;
-    width: 100%;
-    border-radius: 15px;
-    font-size: 2rem;
+    width: 30.2vw;   
+    height: 5vw;   
+    margin: 1vw 3.8vw;
+    border-radius: 1vw;
+    font-size: 2vw;
     font-weight: 500; 
-    background-color: white;
+    background-color: #F2F2F2;
     cursor: pointer;
+    border: 1px solid #CBCBCB;
+    &: hover{   
+        background-color: #B5B5B5;
+    }
 `
