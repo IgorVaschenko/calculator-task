@@ -1,10 +1,10 @@
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 import { BrowserRouter } from 'react-router-dom'
-import { Provider } from 'react-redux'
+import { Provider, useSelector } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 
 import Application from '@/App'
@@ -12,7 +12,6 @@ import Application from '@/App'
 import { store } from '@/store'
 import theme from '@/theme'
 import GlobalStyles from '@/globalStyles'
-
 
 
 ReactDOM.render(

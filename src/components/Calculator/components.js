@@ -3,15 +3,15 @@ import styled from 'styled-components';
 
 
 export const CalcAndHistory = styled.div`
-    background-color: white;
+    background-color: ${props => props.white};
     display: flex;
-    height: 80vh;
+    height: 90vh;
     flex-direction: row;
 `
 
 export const CalculatorWrapper = styled.div`
     flex-grow: 3;
-    background-color: white;
+    background-color: ${props => props.white};
     flex-direction: column;
 `
 export const ButtonsWrapper = styled.div`
@@ -30,11 +30,11 @@ export const CalcButton = styled.button`
     border-radius: 1vw;
     font-size: 2vw;
     font-weight: 500; 
-    background-color: #F2F2F2;
+    background-color: ${props => props.buttonsColor};
     cursor: pointer;
     border: 1px solid #CBCBCB;
     &: hover{   
-        background-color: #B5B5B5;
+        background-color: ${props => props.buttonsColorHover};
     }
 `
 
@@ -45,10 +45,11 @@ export const EqualButton = styled.button`
     border-radius: 1vw;
     font-size: 2vw;
     font-weight: 500; 
-    background-color: #F2F2F2;
+    background-color: ${props => props.buttonsColor};
+
     cursor: pointer;
     border: 1px solid #CBCBCB;
     &: hover{   
-        background-color: #B5B5B5;
+        background-color: ${props => props.buttonsColorHover};
     }
 `

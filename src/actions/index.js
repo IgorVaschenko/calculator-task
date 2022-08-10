@@ -11,14 +11,14 @@ export const addToExpression = (payload) => ({
 })
 
 export const deleteExpression = () => ({
-    type: BTN_ADD,
+    type: BTN_DELETE,
 })
 
 export const backspFromExpression = () => ({
-    type: BTN_ADD,
+    type: BTN_BACKSP,
 })
 
 export const calcExpression = () => ({
-    type: BTN_ADD,
+    type: BTN_CALC,
 })
 

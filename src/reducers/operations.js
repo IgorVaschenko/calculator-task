@@ -3,49 +3,50 @@ import {
     BTN_BACKSP,
     BTN_CALC,
     BTN_DELETE,
-    BTN_SIGN_CHANGE
+    BTN_SIGN_CHANGE,
+    CLEAR_HISTORY
 } from "@/constants";
 import { chechkingAddValue, chechkingBtnCalc } from "@/utils/checksForReducers/chechkingAddValue";
 import equal from "@/utils/calculationValue/equal";
 
 
 const initialState = {
-    fieldValue: [0],
+    fieldValue: '',
     history: []
 }
 
 const operations = (state = initialState, { type, payload }) => {
-    console.log({ type, payload });
     switch (type) {
         case BTN_ADD:
             return chechkingAddValue(state, payload) || {
                 ...state,
-                fieldValue: [...state.fieldValue.filter((item, index) => !(item === 0 && index === 0)), ...payload]
+                fieldValue: state.fieldValue + payload
             }
         case BTN_BACKSP:
             return {
                 ...state,
-                fieldValue: state.fieldValue.length > 1 ?
-                    [...state.fieldValue].slice(0, state.fieldValue.length - 1) :
-                    [0]
+                fieldValue: state.fieldValue.slice(0, state.fieldValue.length - 1)
             }
         case BTN_DELETE:
             return {
                 ...state,
-                fieldValue: [0]
+                fieldValue: ''
             }
         case BTN_SIGN_CHANGE:
             return {
                 ...state,
-                fieldValue: state.fieldValue[0] === '-' ?
-                    [...state.fieldValue.filter((item, index) => item !== '-')] :
-                    ['-', ...state.fieldValue]
+                fieldValue: state.fieldValue[0] === '-' ? state.fieldValue.slice(1) : '-' + state.fieldValue
             }
         case BTN_CALC:
             return chechkingBtnCalc(state) || {
                 ...state,
-                history: [...state.history, [...state.fieldValue].join('')],
-                fieldValue: equal(state.fieldValue),
+                fieldValue: state.fieldValue,
+                history: [...state.history, state.fieldValue],
+            }
+        case CLEAR_HISTORY:
+            return {
+                ...state,
+                history: []
             }
         default:
             return state
