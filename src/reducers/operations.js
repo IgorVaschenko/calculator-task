@@ -24,6 +24,7 @@ const operations = (state = initialState, { type, payload }) => {
             }
         case BTN_BACKSP:
             return {
+                ///!!!
                 ...state,
                 fieldValue: state.fieldValue.slice(0, state.fieldValue.length - 1)
             }
@@ -40,7 +41,7 @@ const operations = (state = initialState, { type, payload }) => {
         case BTN_CALC:
             return chechkingBtnCalc(state) || {
                 ...state,
-                fieldValue: state.fieldValue,
+                fieldValue: equal(state.fieldValue),
                 history: [...state.history, state.fieldValue],
             }
         case CLEAR_HISTORY:

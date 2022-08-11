@@ -16,11 +16,12 @@ export const chechkingAddValue = (state, payload) => {
             || state.fieldValue[state.fieldValue.length - 1] === '-'
             || state.fieldValue[state.fieldValue.length - 1] === '*'
             || state.fieldValue[state.fieldValue.length - 1] === '/'
+            || state.fieldValue[state.fieldValue.length - 1] === '%'
         )) return state
     if (payload === '-' && (state.fieldValue[state.fieldValue.length - 1] === '-')) return state
 
 
 }
 export const chechkingBtnCalc = (state) => {
-    if (state.fieldValue.length === 1 && !state.fieldValue[0]) return state
+    if (state.fieldValue.length === 0 && !state.fieldValue[0]) return state
 } 

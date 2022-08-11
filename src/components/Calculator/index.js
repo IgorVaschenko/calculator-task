@@ -14,6 +14,7 @@ const Calculator = (props) => {
     }
     const hadleChange = (event) => {
         btns.map(btn => {
+            console.log(event);
             btn.payload === event && dispatch(btn)
         })
     }
