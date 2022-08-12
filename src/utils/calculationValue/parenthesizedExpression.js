@@ -1,5 +1,5 @@
 import { multiplicationDivision } from "./multiplicationDivision"
-import { additionSubtraction } from "./additionSubtraction"
+import { additionSubtraction } from "./simpleOperations"
 
 export const parenthesizedExpression = array => {
     if (array.indexOf('(') !== 0 && typeof (array[array.indexOf('(') - 1]) === 'number') {
