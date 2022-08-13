@@ -6,7 +6,7 @@ import {
     BTN_SIGN_CHANGE,
     CLEAR_HISTORY
 } from "@/constants";
-import { chechkingAddValue, chechkingBtnCalc } from "@/utils/checksForReducers/chechkingAddValue";
+import { chechkingAddValue, chechkingBtnCalc } from "@/utils/checksForReducers/checks";
 import equal from "@/utils/calculationValue/equal";
 
 
