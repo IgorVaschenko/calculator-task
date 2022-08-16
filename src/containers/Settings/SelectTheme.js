@@ -1,9 +1,11 @@
-import { DARK_THEME, LIGHT_THEME } from '@/constants';
+import { DARK_THEME, LIGHT_THEME } from '@/constants'
 import React from 'react'
 import { SelectThemeContainer, Selector } from './components'
+import theme from '@/theme'
 
 const SelectTheme = ({ onChange }) => {
-    const selectChange = (e) => onChange(e.target.value)
+
+    const selectChange = e => onChange(e.target.value)
 
     return (
         <SelectThemeContainer>
@@ -13,7 +15,7 @@ const SelectTheme = ({ onChange }) => {
                 <option value={DARK_THEME}>Dark theme</option>
             </Selector>
         </SelectThemeContainer>
-    );
+    )
 }
 
-export default SelectTheme;
+export default SelectTheme

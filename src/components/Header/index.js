@@ -1,17 +1,12 @@
-import React from 'react';
-import { Header } from './components';
-import Links from '../router';
-import theme from '@/theme';
+import React from 'react'
+import { Header, CalculatorApp } from './components'
+import Links from '../Links'
 
-export default (props) => {
+export default () => {
     return (
-        <Header
-            color={theme.colors.white}
-            background={theme.colors.backgroundColor}
-        >
-            <div>Calculator App</div>
+        <Header>
+            <CalculatorApp>Calculator App</CalculatorApp>
             <Links />
         </Header>
     )
 }
-

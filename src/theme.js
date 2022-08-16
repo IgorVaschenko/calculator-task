@@ -1,18 +1,43 @@
+import React from 'react'
+import { useSelector } from 'react-redux'
 import { css } from 'styled-components'
+import { LIGHT_THEME } from './constants'
 
 const font = 'sans-serif'
 
-// Color palette
-const black = '#000000'
-const white = '#ffffff'
-const error = '#c86464'
-const primary = '#c06c84'
-const secondary = '#6c5b7b'
-const secondaryLight = '#6a6b7b'
-const backgroundColor = '#3D3F41'
-const buttonsColor = '#F2F2F2'
-const buttonsColorHover = '#B5B5B5'
+// const flagVal = () => {
+//   const themeFromRedux = useSelector(state => state.themes.theme)
+//   return themeFromRedux === LIGHT_THEME ? true : false
+// }
+// const flag = flagVal()
 
+// export const lightTheme = {
+//   colors: {
+//     black: '#000000',
+//     white: '#ffffff',
+//     error: '#c86464',
+//     primary: '#c06c84',
+//     secondary: '#6c5b7b',
+//     secondaryLight: '#6a6b7b',
+//     backgroundColor: '#3D3F41',
+//     buttonsColor: '#F2F2F2',
+//     buttonsColorHover: '#B5B5B5',
+//   },
+// }
+
+// export const darkTheme = {
+//   colors: {
+//     black: '#000000',
+//     white: '#ffffff',
+//     error: '#c86464',
+//     primary: '#c06c84',
+//     secondary: '#6c5b7b',
+//     secondaryLight: '#6a6b7b',
+//     backgroundColor: '#FF00AE',
+//     buttonsColor: '#F2F2F2',
+//     buttonsColorHover: '#FF00AE',
+//   },
+// }
 
 const boxShadows = [
   'box-shadow: 0px 4px 24px -8px rgba(0,0,0,0.75)',
@@ -43,7 +68,10 @@ const below = Object.keys(size).reduce((acc, label) => {
   return acc
 }, {})
 
+
+
 export default {
+  // flag,
   above,
   below,
   boxShadows,
@@ -51,14 +79,49 @@ export default {
   spaces: [0, 4, 8, 16, 32, 64, 128],
   fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 72, 80],
   colors: {
-    primary,
-    secondary,
-    secondaryLight,
-    black,
-    white,
-    error,
-    backgroundColor,
-    buttonsColor,
-    buttonsColorHover,
+    black: '#000000',
+    white: '#ffffff',
+    error: '#c86464',
+    primary: '#c06c84',
+    secondary: '#6c5b7b',
+    secondaryLight: '#6a6b7b',
+    backgroundColor: '#3D3F41',
+    buttonsColor: '#F2F2F2',
+    buttonsColorHover: '#B5B5B5',
+  },
+}
+
+
+// export const lightTheme = {
+//   colors: {
+//     black: '#000000',
+//     white: '#ffffff',
+//     error: '#c86464',
+//     primary: '#c06c84',
+//     secondary: '#6c5b7b',
+//     secondaryLight: '#6a6b7b',
+//     backgroundColor: '#3D3F41',
+//     buttonsColor: '#F2F2F2',
+//     buttonsColorHover: '#B5B5B5',
+//   },
+// }
+
+export const darkTheme = {
+  above,
+  below,
+  boxShadows,
+  font,
+  spaces: [0, 4, 8, 16, 32, 64, 128],
+  fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 72, 80],
+  colors: {
+    black: '#000000',
+    white: '#ffffff',
+    error: '#c86464',
+    primary: '#c06c84',
+    secondary: '#6c5b7b',
+    secondaryLight: '#6a6b7b',
+    backgroundColor: '#FF00AE',
+    buttonsColor: '#F2F2F2',
+    buttonsColorHover: '#FF00AE',
   },
 }

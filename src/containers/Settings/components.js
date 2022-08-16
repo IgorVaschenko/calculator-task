@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 
-export const ControlPanelWrapper = styled.div`
-    ${'' /* background-color: #FFFFFF; */}
-    background-color: ${props => props.white};
+export const SettingsWrapper = styled.div`
+    background-color: ${props => props.theme.colors.backgroundColor};
+    color: ${props => props.theme.colors.textColor};
     display: flex;
     height: 90vh;
     flex-direction: column;
@@ -19,6 +19,9 @@ export const SelectThemeContainer = styled.div`
     margin: 20px;
 `
 export const Selector = styled.select`
+    background-color: ${props => props.theme.colors.backgroundColor};
+    color: ${props => props.theme.colors.textColor};
+    padding-left: 20px;
     width: 25vw;
     height: 10vh;
     font-size: 3vh;
@@ -30,13 +33,12 @@ export const ClearButton = styled.button`
     height: 10vh;
     font-size: 3vh;
     cursor: pointer;
-    background-color: #FFFFFF;
-    background-color: ${props => props.white};
+    background-color: ${props => props.theme.colors.backgroundColor};
+    color: ${props => props.theme.colors.textColor};
     border: 1px solid #CBCBCB;
     border-radius: 5px;
     margin: 10px 20px;
     &:hover{
-        ${'' /* background-color: #B5B5B5; */}
         background-color: ${props => props.buttonsColorHover};
     }
 `

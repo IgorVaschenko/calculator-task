@@ -6,6 +6,6 @@ export const PageLayout = styled.div`
 
   max-width: 1280px;
 
-  padding: ${({ theme }) => theme.spaces[4]}px;
+  padding: ${({ theme }) => theme.spaces[0]}px;
   margin: 0 auto;
 `

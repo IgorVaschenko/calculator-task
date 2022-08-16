@@ -2,12 +2,12 @@ import {
     BTN_ADD,
     BTN_BACKSP,
     BTN_CALC,
-    BTN_DELETE
-} from "@/constants";
+    BTN_DELETE,
+} from "@/constants"
 
-export const addToExpression = (payload) => ({
+export const addToExpression = payload => ({
     type: BTN_ADD,
-    payload
+    payload,
 })
 
 export const deleteExpression = () => ({

@@ -3,16 +3,15 @@ import React from 'react'
 import { PageLayout } from '@/layouts'
 import WrapperPage from '@/components/WrapperPage'
 import Header from '@/components/Header'
-import ControlPanel from '@/components/ControlPanel'
+import Settings from '@/containers/Settings'
 
 export default () => {
   return (
-    <WrapperPage>
-      <Header />
-      <ControlPanel />
-    </WrapperPage>
+    <PageLayout>
+      <WrapperPage>
+        <Header />
+        <Settings />
+      </WrapperPage>
+    </PageLayout>
   )
 }
-
-    // <PageLayout>
-    // </PageLayout>

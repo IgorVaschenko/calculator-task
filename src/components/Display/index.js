@@ -1,19 +1,20 @@
-import React, { useEffect, useRef } from 'react';
-import { Display, InputExpression } from './components';
+import InputExpression from '@/containers/InputExpression'
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
+import { handleAction } from 'redux-actions'
+import { Display, InputValue } from './components'
 
-export default ({ result, hadleChange }) => {
-    const focusInput = useRef(null)
-    useEffect(() => {
-        focusInput.current.focus()
-    })
+export default () => {
+    const value = useSelector(state => state.operations.fieldValue)
+
     return (
         <Display>
-            <InputExpression
-                ref={focusInput}
-                type='text'
-                value={result}
-                placeholder='0'
-                onChange={(event) => hadleChange(event.target.value[event.target.value.length - 1])}
+            <InputExpression />
+            <InputValue
+                type="text"
+                value={value.match(/-{0,1}\d+\.{0,1}\d*$/) || ''}
+                placeholder=""
+                onChange={event => event}
             />
         </Display>
     )

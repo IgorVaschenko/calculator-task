@@ -1,23 +1,23 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
-import { ControlPanelWrapper, ClearButton } from './components';
-import SelectTheme from './SelectTheme';
-import { CLEAR_HISTORY } from '@/constants';
-import theme from '@/theme';
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { SettingsWrapper, ClearButton } from './components'
+import SelectTheme from './SelectTheme'
+import { CLEAR_HISTORY } from '@/constants'
+import theme, { lightTheme, darkTheme } from '@/theme'
 
-const ControlPanel = () => {
+
+const Settings = () => {
     const dispatch = useDispatch()
 
     const handleClick = () => {
         dispatch({ type: CLEAR_HISTORY })
     }
+
     const handleChange = () => {
         dispatch({ type: event.target.value })
-
     }
-
     return (
-        <ControlPanelWrapper
+        <SettingsWrapper
             background={theme.colors.white}
         >
             Settings
@@ -31,8 +31,8 @@ const ControlPanel = () => {
             >
                 Clear All History
             </ClearButton>
-        </ControlPanelWrapper>
-    );
+        </SettingsWrapper>
+    )
 }
 
-export default ControlPanel;
+export default Settings

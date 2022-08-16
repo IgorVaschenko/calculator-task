@@ -4,5 +4,5 @@ import themes from './themes'
 
 export const rootReducer = combineReducers({
   operations,
-  themes
+  themes,
 })
