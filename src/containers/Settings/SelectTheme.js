@@ -1,7 +1,8 @@
-import { DARK_THEME, LIGHT_THEME } from '@/constants'
 import React from 'react'
-import { SelectThemeContainer, Selector } from './components'
-import theme from '@/theme'
+import PropTypes from 'prop-types';
+
+import { DARK_THEME, LIGHT_THEME } from '@/constants'
+import { SelectThemeContainer, Selector } from '@/containers/Settings/components'
 
 const SelectTheme = ({ onChange }) => {
 
@@ -19,3 +20,7 @@ const SelectTheme = ({ onChange }) => {
 }
 
 export default SelectTheme
+
+SelectTheme.propTypes = {
+    onChange: PropTypes.func
+};

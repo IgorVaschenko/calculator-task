@@ -1,7 +1,7 @@
 export const chechkingAddValue = (state, payload) => {
 
-    const stateValue = state.fieldValue;
-    const stateLength = state.fieldValue.length;
+    const stateValue = state.fieldValue
+    const stateLength = state.fieldValue.length
 
     const math = ['+', '-', '*', '/', '%']
     const mathAndEmphy = ['+', '-', '*', '/', '%', '']
@@ -10,13 +10,13 @@ export const chechkingAddValue = (state, payload) => {
 
     if (stateValue[0] === '0' && stateLength === 1 && payload === '0') return state
 
-    if (payload === '.'
-        && parseFloat(stateValue.split('').reverse().join('')).toString().includes('.')
-        && typeof (stateValue[stateLength - 1]) === 'number'
+    if (payload === '.' &&
+        parseFloat(stateValue.split('').reverse().join('')).toString().includes('.') &&
+        typeof (stateValue[stateLength - 1]) === 'number'
     ) return state
 
-    if (payload === '.'
-        && parseInt(stateValue.split('').reverse().join('')).toString().includes('.')
+    if (payload === '.' &&
+        parseInt(stateValue.split('').reverse().join('')).toString().includes('.')
     ) return state
 
     if (payload === '.' && stateValue[stateLength - 1] === '.') return state
@@ -32,11 +32,11 @@ export const chechkingAddValue = (state, payload) => {
 }
 export const chechkingBtnCalc = state => {
 
-    const stateValue = state.fieldValue;
-    const stateLength = state.fieldValue.length;
+    const stateValue = state.fieldValue
+    const stateLength = state.fieldValue.length
 
-    const stateValueHist = state.history;
-    const stateLengthHist = state.history.length;
+    const stateValueHist = state.history
+    const stateLengthHist = state.history.length
 
     if (stateLength === 0 && !stateValue[0]) return state
 

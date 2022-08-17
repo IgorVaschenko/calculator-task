@@ -14,7 +14,7 @@ const initialState = {
     fieldValue: '',
     history: [],
     pressedEquals: false,
-    expression: ''
+    expression: '',
 }
 
 const operations = (state = initialState, { type, payload }) => {

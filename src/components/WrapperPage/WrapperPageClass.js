@@ -1,5 +1,6 @@
 import React from 'react'
-import { HomeWrapperPage } from "./components"
+import PropTypes from 'prop-types';
+import { HomeWrapperPage } from "@/components/WrapperPage/components"
 
 class WrapperPageCl extends React.Component {
     render() {
@@ -12,3 +13,7 @@ class WrapperPageCl extends React.Component {
 }
 
 export default WrapperPageCl
+
+WrapperPageCl.propTypes = {
+    children: PropTypes.any.isRequired
+};

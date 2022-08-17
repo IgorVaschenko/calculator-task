@@ -1,16 +1,17 @@
 import React from 'react'
 
-import theme from '@/theme'
+import { Loader } from '@/components/Loader/components'
 
-import { Loader } from './components'
+import darkTheme from '@/themes/darkTheme'
+import lightTheme from '@/themes/lightTheme'
 
-const LOADER_SIZE = 100
+const LOADER_SIZE = 300
 
 export default () => {
   return (
     <Loader
       type="Bars"
-      color={theme.colors.secondary}
+      color='black'
       height={LOADER_SIZE}
       width={LOADER_SIZE}
     />

@@ -1,7 +1,8 @@
-import ControlPanel from '@/containers/ControlPanel'
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { History, HistoryList, HistoryUnit } from './components'
+import ControlPanel from '@/containers/ControlPanel'
+import HistoryListener from '@/containers/HistoryListener'
+import { History } from '@/components/History/components'
 
 export default () => {
     const history = useSelector(state => state.operations.history)
@@ -9,13 +10,7 @@ export default () => {
         <ControlPanel>
             <History>
                 History
-                <HistoryList>
-                    {history.map((hist, i) => (
-                        <HistoryUnit key={i}>
-                            {hist}
-                        </HistoryUnit>
-                    ))}
-                </HistoryList>
+                <HistoryListener />
             </History>
         </ControlPanel>
     )

@@ -1,2 +1,2 @@
-export * from './lightTheme'
-export * from './darkTheme'
+export * from '@/themes/lightTheme'
+export * from '@/themes/darkTheme'

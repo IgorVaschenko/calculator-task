@@ -1,44 +1,45 @@
-import React from 'react'
 import styled from 'styled-components'
-
+import darkTheme from '@/themes/darkTheme'
+import lightTheme from '@/themes/lightTheme'
 
 export const SettingsWrapper = styled.div`
     background-color: ${props => props.theme.colors.backgroundColor};
     color: ${props => props.theme.colors.textColor};
+    font-size: ${props => props.theme.fontSize[5]}rem;
+    padding: ${props => props.theme.spaces[6]}px;
     display: flex;
-    height: 90vh;
     flex-direction: column;
-    padding: 30px;
-    font-size: 5vh;
 `
 
 export const SelectThemeContainer = styled.div`
+    font-size: ${props => props.theme.fontSize[1]}rem;
+    padding:  ${props => props.theme.spaces[4]}px;
     display: flex;
     flex-direction: column;
-    font-size: 2vh;
-    margin: 20px;
 `
 export const Selector = styled.select`
+    width: ${props => props.theme.width[4]}px;
+    height:${props => props.theme.height[2]}px;
     background-color: ${props => props.theme.colors.backgroundColor};
     color: ${props => props.theme.colors.textColor};
-    padding-left: 20px;
-    width: 25vw;
-    height: 10vh;
-    font-size: 3vh;
-    border: 1px solid #CBCBCB;
-    border-radius: 5px;
+    padding-left: ${props => props.theme.spaces[4]}px;
+    font-size: ${props => props.theme.fontSize[2]}rem;
+    border: 1px solid ${props => props.theme.colors.calcBorder};
+    border-radius: ${props => props.theme.spaces[2]}px;
+    cursor: pointer;
 `
 export const ClearButton = styled.button`
-    width: 25vw;
-    height: 10vh;
-    font-size: 3vh;
-    cursor: pointer;
+    width: ${props => props.theme.width[4]}px;
+    height:${props => props.theme.height[2]}px;
     background-color: ${props => props.theme.colors.backgroundColor};
     color: ${props => props.theme.colors.textColor};
-    border: 1px solid #CBCBCB;
-    border-radius: 5px;
-    margin: 10px 20px;
+    padding-left: ${props => props.theme.spaces[4]}px;
+    font-size: ${props => props.theme.fontSize[2]}rem;
+    border: 1px solid ${props => props.theme.colors.calcBorder};
+    border-radius: ${props => props.theme.spaces[2]}px;
+    margin: ${props => props.theme.spaces[2]}px ${props => props.theme.spaces[3]}px;
+    cursor: pointer;
     &:hover{
-        background-color: ${props => props.buttonsColorHover};
+        background-color: ${props => props.theme.colors.buttonsColorHover};
     }
 `

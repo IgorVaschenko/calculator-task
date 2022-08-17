@@ -1,29 +1,25 @@
-import React, { lazy, Suspense, useEffect, useState } from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React, { lazy, Suspense } from 'react'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 
 import {
   HOME_PAGE_ROUTE,
   SETTINGS_PAGE_ROUTE,
   LIGHT_THEME,
   DARK_THEME,
-  HOME_PAGE_ROUTE_CLASS
+  HOME_PAGE_ROUTE_CLASS,
 } from '@/constants'
 
 import { ThemeProvider } from 'styled-components'
 
 import Loader from '@/components/Loader'
 
-import theme from '@/theme'
 import lightTheme from '@/themes/lightTheme'
 import darkTheme from '@/themes/darkTheme'
 
-import { BrowserRouter } from 'react-router-dom'
 import GlobalStyles from '@/globalStyles'
 
-
 import { useSelector } from 'react-redux'
-import ErrorBoundary from '@/ErrorBoundary'
-
+import ErrorBoundary from '@/containers/ErrorBoundary'
 
 const HomePage = lazy(() => import('@/pages/Home'))
 const HomePageClass = lazy(() => import('@/pages/HomeClass'))

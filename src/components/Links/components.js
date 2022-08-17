@@ -1,6 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 import darkTheme from '@/themes/darkTheme'
 import lightTheme from '@/themes/lightTheme'
 
@@ -10,7 +9,7 @@ export const Uls = styled.ul`
 export const Lis = styled.li`
     display: inline-block;
     color: ${props => props.theme.colors.textColorHeader};
-    margin: 0 ${(props) => props.theme.spaces[3]}px;
+    margin: 0 ${props => props.theme.spaces[3]}px;
     &:hover(Link) {
         textDecoration: underline;
     }

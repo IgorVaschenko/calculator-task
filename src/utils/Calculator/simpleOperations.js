@@ -5,7 +5,7 @@ import {
     regExRem,
     regExAddSub,
     regExAddSubPosNeg,
-    regExPar
+    regExPar,
 } from "@/constants"
 
 

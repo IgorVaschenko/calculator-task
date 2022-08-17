@@ -1,16 +1,17 @@
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux';
-import { DisplayExpression } from './components';
+import { useSelector } from 'react-redux'
+
+import { DisplayExpression } from '@/containers/InputExpression/components'
 
 const InputExpression = () => {
 
     const expression = useSelector(state => state.operations.fieldValue)
     const expressionVal =
-        expression.includes('+')
-            || expression.includes('-')
-            || expression.includes('*')
-            || expression.includes('/')
-            || expression.includes('%')
+        expression.includes('+') ||
+            expression.includes('-') ||
+            expression.includes('*') ||
+            expression.includes('/') ||
+            expression.includes('%')
             ? expression
             : ''
     const resultExpression = useSelector(state => state.operations.history)
@@ -23,4 +24,4 @@ const InputExpression = () => {
     </DisplayExpression>)
 }
 
-export default InputExpression;
+export default InputExpression
