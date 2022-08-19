@@ -7,6 +7,8 @@ import {
     numbersWithoutZero,
 } from "@/utils/Calculator/simpleOperations"
 
+import { calcValReplace, calcValReturn } from "@/utils/Calculator/calcValReturn"
+
 
 const Command = function (execute, value) {
     this.execute = execute
@@ -38,8 +40,7 @@ const AddSubCommand = function (value) {
 }
 
 const Calculator = function (calculatorValue) {
-
-    let current = calculatorValue
+    let current = calcValReplace(calculatorValue)
 
     return {
         execute: function (command) {
@@ -62,13 +63,13 @@ function run(calculatorValue) {
         calculator.execute(new RemCommand(calculatorValue))
         calculator.execute(new AddSubCommand(calculatorValue))
 
-        if (isNaN(parseFloat(calculator.getCurrentValue())) || parseFloat((calculator.getCurrentValue())) === Infinity) {
+        const result = calculator.getCurrentValue()
+
+        if (isNaN(parseFloat(result)) && result !== '' || parseFloat((result)) === Infinity) {
             throw new Error()
         }
 
-        return parseFloat(calculator.getCurrentValue()) === parseInt(calculator.getCurrentValue())
-            ? calculator.getCurrentValue().toString()
-            : (+calculator.getCurrentValue()).toFixed(3).toString()
+        return calcValReturn(result)
     } catch {
         return 'Error'
     }

@@ -1,23 +1,23 @@
 import styled from 'styled-components'
-import lightTheme from '@/themes/lightTheme'
-import darkTheme from '@/themes/darkTheme'
 
 export const CalcAndHistory = styled.div`
     background: ${props => props.theme.colors.backgroundColor};
-    height:${props => props.theme.height[6]}px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 `
 
-export const CalculatorWrapper = styled.div``
+export const CalculatorWrapper = styled.div`
+    margin-right: ${props => props.theme.spaces[4]}px;
+`
 
 export const ButtonsWrapper = styled.div`
     width: ${props => props.theme.width[9]}px;
+    margin: ${props => props.theme.spaces[4]}px auto;
     display: flex;
     flex-wrap: wrap; 
     align-content: flex-end;
     justify-content: flex-end;
-    margin: ${props => props.theme.spaces[4]}px auto;
 `
 
 export const CalcButton = styled.button`
@@ -28,8 +28,9 @@ export const CalcButton = styled.button`
     font-size: ${props => props.theme.fontSize[5]}rem;
     background: ${props => props.theme.colors.buttonsColor};
     color: ${props => props.theme.colors.textColorButton};
-    cursor: pointer;
     border: 1px solid ${props => props.theme.colors.calcBorder};
+    cursor: pointer;
+    
     &: hover{   
         background-color: ${props => props.theme.colors.buttonsColorHover};
     }
@@ -43,8 +44,9 @@ export const EqualButton = styled.button`
     font-size: ${props => props.theme.fontSize[5]}rem; 
     background: ${props => props.theme.colors.buttonsColor};
     color: ${props => props.theme.colors.textColorButton};
-    cursor: pointer;
     border: 1px solid ${props => props.theme.colors.calcBorder};
+    cursor: pointer;
+    
     &: hover{   
         background-color: ${props => props.theme.colors.buttonsColorHover};
     }

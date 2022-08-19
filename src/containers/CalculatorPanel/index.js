@@ -2,35 +2,42 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { btns } from '@/constants'
-import { ButtonsWrapper, CalcButton, EqualButton } from '@/components/Calculator/components'
 import { KeyPad } from '@/components/KeyPad'
+
+import { ButtonsWrapper, CalcButton, EqualButton } from '@/components/Calculator/components'
 
 
 const CalculatorPanel = () => {
+
     const dispatch = useDispatch()
     const fieldValue = useSelector(state => state.operations.fieldValue)
 
-    const handleClick = btn => {
-        dispatch(btn)
+    const handleClick = () => {
+        btns.map(btn => {
+            btn.key === event.target.id && dispatch(btn)
+        })
     }
-    const hadleKeyUp = event =>
-        useEffect(() =>
-            addEventListener('keyup', event => KeyPad(event, dispatch))
-            , [])
+
+    useEffect(() => {
+        addEventListener('keyup', () => KeyPad(event, dispatch))
+        return removeEventListener('keyup', () => KeyPad(event, dispatch))
+    }, [])
 
     return (
-        <ButtonsWrapper onKeyUp={hadleKeyUp(event)}>
+        <ButtonsWrapper>
             {btns.map((btn, index) => (
-                index < btns.length - 1
+                btn.payload !== '='
                     ? <CalcButton
+                        id={btn.key}
                         key={btn.payload}
-                        onClick={() => handleClick(btn)}
+                        onClick={handleClick}
                     >
                         {btn.payload}
                     </CalcButton>
                     : <EqualButton
+                        id={btn.key}
                         key={btn.payload}
-                        onClick={() => handleClick(btn)}
+                        onClick={handleClick}
                     >
                         {btn.payload}
                     </EqualButton>

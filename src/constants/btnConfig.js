@@ -4,7 +4,7 @@ import {
     BTN_CALC,
     BTN_BACKSP,
     BTN_SIGN_CHANGE,
-    CLEAR_HISTORY,
+    BTN_DELETE_EXP_VAL,
 } from "@/constants"
 
 export const btns = [
@@ -114,7 +114,7 @@ export const btns = [
         key: '%',
     },
     {
-        type: CLEAR_HISTORY,
+        type: BTN_DELETE_EXP_VAL,
         payload: 'MC',
         key: 'MC',
     },

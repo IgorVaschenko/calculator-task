@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import darkTheme from '@/themes/darkTheme'
-import lightTheme from '@/themes/lightTheme'
 
 export const Error = styled.div`
     width: ${props => props.theme.width[8]}px;

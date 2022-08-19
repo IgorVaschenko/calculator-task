@@ -12,6 +12,7 @@ import {
 export const numbersWithoutZero = value => {
 
     if (!value.match(regExWithZero)) return value
+    if (value[value.length - 1] === '.') return value
 
     const numbersWithoutZero = value.match(regExWithZero)
     numbersWithoutZero.map((exprission, index) =>
@@ -23,11 +24,11 @@ export const numbersWithoutZero = value => {
             exprission.length, value.length,
         ),
     )
-
     return value
 }
 
 export const multiplication = value => {
+
     if (!value.includes('*')) return value
 
     const multiplicationExpressionsByTwoNumbers = value.match(regExMul)
@@ -47,6 +48,7 @@ export const multiplication = value => {
 }
 
 export const division = value => {
+
     if (!value.includes('/')) return value
 
     const divisionExpressionsByTwoNumbers = value.match(regExDiv)
@@ -66,6 +68,7 @@ export const division = value => {
 }
 
 export const remainder = value => {
+
     if (!value.includes('%')) return value
 
     const remainderExpressionsByTwoNumbers = value.match(regExRem)
@@ -87,6 +90,7 @@ export const remainder = value => {
 export const additionSubtraction = value => {
 
     if (!value.includes('+') && !value.includes('-')) return value
+
     value = value.replace('--', '+')
     value = value.replace('+-', '-')
     value = value.replace('-+', '-')
@@ -98,6 +102,7 @@ export const additionSubtraction = value => {
 }
 
 export const parentheses = value => {
+
     if (!value.includes('(') && !value.includes(')')) return value
 
     const parenthesesExpressions = value.match(regExPar)
@@ -114,6 +119,7 @@ export const parentheses = value => {
             exprission.length, value.length,
         ),
     )
+
     if (value.includes('(') && value.includes(')')) {
         return parentheses(value)
     } else {

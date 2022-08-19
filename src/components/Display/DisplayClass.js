@@ -1,5 +1,8 @@
 import React from 'react'
+
 import InputExpression from '@/containers/InputExpression'
+import currentValue from '@/utils/expressionBuilder/currentValue'
+
 import { Display, InputValue } from '@/components/Display/components'
 
 class DisplayCl extends React.Component {
@@ -9,8 +12,8 @@ class DisplayCl extends React.Component {
                 <InputExpression />
                 <InputValue
                     type="text"
-                    value={value.match(/-{0,1}\d+\.{0,1}\d*$/) || ''}
-                    placeholder=""
+                    value={currentValue()}
+                    placeholder="0"
                     onChange={event => event}
                 />
             </Display>

@@ -5,8 +5,11 @@ import {
     BTN_DELETE,
     BTN_SIGN_CHANGE,
     CLEAR_HISTORY,
+    BTN_DELETE_EXP_VAL
 } from "@/constants"
+
 import run from "@/utils/Calculator/Calculator"
+import plusMinus from "@/utils/plusMinusChange/plusMinus"
 import { chechkingAddValue, chechkingBtnCalc } from "@/utils/checksForReducers/checks"
 
 
@@ -14,7 +17,7 @@ const initialState = {
     fieldValue: '',
     history: [],
     pressedEquals: false,
-    expression: '',
+    pushedDelete: false,
 }
 
 const operations = (state = initialState, { type, payload }) => {
@@ -24,6 +27,7 @@ const operations = (state = initialState, { type, payload }) => {
                 ...state,
                 fieldValue: state.fieldValue + payload,
                 pressedEquals: false,
+                pushedDelete: false,
             }
         case BTN_BACKSP:
             return {
@@ -35,10 +39,16 @@ const operations = (state = initialState, { type, payload }) => {
                 ...state,
                 fieldValue: '',
             }
+        case BTN_DELETE_EXP_VAL:
+            return {
+                ...state,
+                fieldValue: '',
+                pushedDelete: true,
+            }
         case BTN_SIGN_CHANGE:
             return {
                 ...state,
-                fieldValue: state.fieldValue[0] === '-' ? state.fieldValue.slice(1) : '-' + state.fieldValue,
+                fieldValue: plusMinus(state.fieldValue),
             }
         case BTN_CALC:
             return chechkingBtnCalc(state) || {

@@ -1,9 +1,10 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 
-import { SettingsWrapper, ClearButton } from '@/containers/Settings/components'
 import SelectTheme from '@/containers/Settings/SelectTheme'
 import { CLEAR_HISTORY } from '@/constants'
+
+import { SettingsWrapper, ClearButton } from '@/containers/Settings/components'
 
 
 const Settings = () => {

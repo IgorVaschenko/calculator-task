@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import darkTheme from '@/themes/darkTheme'
-import lightTheme from '@/themes/lightTheme'
 
 export const SettingsWrapper = styled.div`
     background-color: ${props => props.theme.colors.backgroundColor};
@@ -39,6 +37,7 @@ export const ClearButton = styled.button`
     border-radius: ${props => props.theme.spaces[2]}px;
     margin: ${props => props.theme.spaces[2]}px ${props => props.theme.spaces[3]}px;
     cursor: pointer;
+    
     &:hover{
         background-color: ${props => props.theme.colors.buttonsColorHover};
     }

@@ -1,9 +1,6 @@
 import styled from 'styled-components'
-import darkTheme from '@/themes/darkTheme'
-import lightTheme from '@/themes/lightTheme'
 
 export const DisplayWrapper = styled.form`
-    width: ${props => props.theme.width[11]}px;
     border-bottom: 1px solid ${props => props.theme.colors.border};
     margin: ${props => props.theme.spaces[0]}px ${props => props.theme.spaces[5]}px;
     display: flex;
@@ -20,6 +17,7 @@ export const InputValue = styled.input`
     background: ${props => props.theme.colors.backgroundColor};
     text-align: right;
     border: none; 
+    
     &:focus{
         border: none;
         outline: none;

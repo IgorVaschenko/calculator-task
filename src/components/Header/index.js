@@ -1,6 +1,8 @@
 import React from 'react'
-import { Header, CalculatorApp } from '@/components/Header/components'
+
 import Links from '@/components/Links'
+
+import { Header, CalculatorApp } from '@/components/Header/components'
 
 export default () => {
     return (

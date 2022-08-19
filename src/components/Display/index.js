@@ -1,9 +1,13 @@
 import React from 'react'
-import InputExpression from '@/containers/InputExpression'
 import { useSelector } from 'react-redux'
+
+import InputExpression from '@/containers/InputExpression'
+import currentValue from '@/utils/expressionBuilder/currentValue'
+
 import { DisplayWrapper, InputValue } from '@/components/Display/components'
 
 export default () => {
+
     const value = useSelector(state => state.operations.fieldValue)
 
     return (
@@ -11,8 +15,8 @@ export default () => {
             <InputExpression />
             <InputValue
                 type="text"
-                value={value.match(/-{0,1}\d+\.{0,1}\d*$/) || ''}
-                placeholder=""
+                value={currentValue(value)}
+                placeholder="0"
                 onChange={event => event}
             />
         </DisplayWrapper>

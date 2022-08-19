@@ -1,9 +1,7 @@
 import styled from 'styled-components'
-import darkTheme from '@/themes/darkTheme'
-import lightTheme from '@/themes/lightTheme'
 
 export const History = styled.div`
-    width: ${props => props.theme.width[2]}px;
+    width: ${props => props.theme.width[4]}px;
     height:${props => props.theme.height[5]}px;
     color: ${props => props.theme.colors.textColorHistory};
     border-left: 1px solid ${props => props.theme.colors.border};

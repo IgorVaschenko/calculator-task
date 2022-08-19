@@ -1,6 +1,8 @@
 import React from 'react'
-import { Header, CalculatorApp } from '@/components/Header/components'
+
 import LinksCl from '@/components/Links/LinksClass'
+
+import { Header, CalculatorApp } from '@/components/Header/components'
 
 class HeaderCl extends React.Component {
     render() {

@@ -2,9 +2,6 @@ import React from 'react'
 
 import { Loader } from '@/components/Loader/components'
 
-import darkTheme from '@/themes/darkTheme'
-import lightTheme from '@/themes/lightTheme'
-
 const LOADER_SIZE = 300
 
 export default () => {

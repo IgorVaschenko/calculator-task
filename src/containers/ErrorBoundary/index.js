@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import { PageLayout } from '@/layouts'
+
 import { Error } from '@/containers/ErrorBoundary/components'
 
 
@@ -17,6 +18,7 @@ class ErrorBoundary extends React.Component {
 
     render() {
         const { error } = this.state
+        const { children } = this.props;
         if (error) {
             return (
                 <PageLayout>
@@ -24,7 +26,7 @@ class ErrorBoundary extends React.Component {
                 </PageLayout>
             )
         } else {
-            return <React.Fragment>{this.props.children}</React.Fragment>
+            return <React.Fragment>{children}</React.Fragment>
         }
     }
 }
@@ -32,5 +34,5 @@ class ErrorBoundary extends React.Component {
 export default ErrorBoundary
 
 ErrorBoundary.propTypes = {
-    children: PropTypes.PropTypes.any.isRequired,
+    children: PropTypes.PropTypes.node.isRequired,
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { btns } from '@/constants/btnConfig'
 
 export const KeyPad = (event, dispatch) => {
@@ -8,5 +9,3 @@ export const KeyPad = (event, dispatch) => {
         })
     )
 }
-
-

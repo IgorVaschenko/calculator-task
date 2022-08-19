@@ -1,18 +1,22 @@
 import React from 'react'
+
 import unique from 'uniqid'
-import { Uls, Lis, StyledLink } from '@/components/Links/components'
+
 import { router } from '@/components/Links/router'
+
+import { Ul, LiItem, StyledLink } from '@/components/Links/components'
+
 
 export default () => {
     return (
-        <Uls>
+        <Ul>
             {router.map(rout => (
-                <Lis key={unique()}>
+                <LiItem key={unique()}>
                     <StyledLink to={rout.address}>
                         {rout.name}
                     </StyledLink>
-                </Lis>
+                </LiItem>
             ))}
-        </Uls>
+        </Ul>
     )
 }

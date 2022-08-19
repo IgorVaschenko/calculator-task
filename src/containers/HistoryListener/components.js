@@ -1,11 +1,9 @@
 import styled from "styled-components"
-import darkTheme from '@/themes/darkTheme'
-import lightTheme from '@/themes/lightTheme'
 
 export const HistoryList = styled.ul`
     font-size: ${props => props.theme.fontSize[2]}rem;
-    list-style-type: none;
     margin: ${props => props.theme.spaces[4]}px;
+    list-style-type: none;
 `
 
 export const HistoryUnit = styled.li`

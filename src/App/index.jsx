@@ -1,25 +1,23 @@
 import React, { lazy, Suspense } from 'react'
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
+
+import Loader from '@/components/Loader'
+import ErrorBoundary from '@/containers/ErrorBoundary'
 
 import {
   HOME_PAGE_ROUTE,
   SETTINGS_PAGE_ROUTE,
   LIGHT_THEME,
-  DARK_THEME,
   HOME_PAGE_ROUTE_CLASS,
 } from '@/constants'
 
-import { ThemeProvider } from 'styled-components'
 
-import Loader from '@/components/Loader'
-
+import GlobalStyles from '@/globalStyles'
 import lightTheme from '@/themes/lightTheme'
 import darkTheme from '@/themes/darkTheme'
 
-import GlobalStyles from '@/globalStyles'
-
-import { useSelector } from 'react-redux'
-import ErrorBoundary from '@/containers/ErrorBoundary'
 
 const HomePage = lazy(() => import('@/pages/Home'))
 const HomePageClass = lazy(() => import('@/pages/HomeClass'))
@@ -27,11 +25,13 @@ const SettingsPage = lazy(() => import('@/pages/Settings'))
 
 
 export default () => {
+
   const themeValue = useSelector(state => state.themes.theme)
+  const themeSelector = themeValue === LIGHT_THEME ? lightTheme : darkTheme
 
   return (
     <BrowserRouter>
-      <ThemeProvider theme={themeValue === LIGHT_THEME ? lightTheme : darkTheme}>
+      <ThemeProvider theme={themeSelector}>
         <ErrorBoundary>
           <Suspense fallback={<Loader />}>
             <Switch>

@@ -1,8 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 
-import darkTheme from '@/themes/darkTheme'
-import lightTheme from '@/themes/lightTheme'
-
 export default createGlobalStyle`
   * {
     margin: 0;

@@ -1,7 +1,9 @@
 import React from 'react'
+
 import ControlPanel from '@/containers/ControlPanel'
-import { History } from '@/components/History/components'
 import HistoryListener from '@/containers/HistoryListener'
+
+import { History } from '@/components/History/components'
 
 class HistoryCl extends React.Component {
     render() {
