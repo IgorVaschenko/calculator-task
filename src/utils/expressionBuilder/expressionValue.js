@@ -12,7 +12,9 @@ export const expressionVal = expression =>
         ? run(expression.slice(0, lastIndexOperation(expression))) + expression[lastIndexOperation(expression)]
         : ''
 
-export const expressionValWithParentheses = expression => include('(', expression) || include('+', expression) ||
+export const expressionValWithParentheses = expression => include('(', expression) ||
+    include(')', expression) ||
+    include('+', expression) ||
     include('-', expression) ||
     include('*', expression) ||
     include('/', expression) ||

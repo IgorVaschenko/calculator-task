@@ -1,6 +1,6 @@
-import lastIndexOperation from "@/utils/expressionBuilder/lastIndexOperation";
+import lastIndexOperation from "@/utils/expressionBuilder/lastIndexOperation"
 
-const plusMinus = (value) => {
+const plusMinus = value => {
     const lastIndex = lastIndexOperation(value)
     return (
         lastIndex === -1
@@ -13,4 +13,4 @@ const plusMinus = (value) => {
     )
 }
 
-export default plusMinus;
+export default plusMinus

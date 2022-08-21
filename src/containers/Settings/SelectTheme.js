@@ -1,6 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types'
+import { useSelector } from 'react-redux'
 
 import { DARK_THEME, LIGHT_THEME } from '@/constants'
 
@@ -25,5 +25,5 @@ const SelectTheme = ({ onChange }) => {
 export default SelectTheme
 
 SelectTheme.propTypes = {
-    onChange: PropTypes.func
-};
+    onChange: PropTypes.func,
+}

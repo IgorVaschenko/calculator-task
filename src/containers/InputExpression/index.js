@@ -22,7 +22,7 @@ const InputExpression = () => {
                     ? expressionValWithParentheses(expression)
                     : expressionVal(expression)
         }
-    </DisplayExpression>)
+            </DisplayExpression>)
 }
 
 export default InputExpression

@@ -1,10 +1,8 @@
 import React, { lazy, Suspense } from 'react'
 import { Switch, Route, BrowserRouter } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { ThemeProvider } from 'styled-components'
 
-import Loader from '@/components/Loader'
-import ErrorBoundary from '@/containers/ErrorBoundary'
+import { ThemeProvider } from 'styled-components'
 
 import {
   HOME_PAGE_ROUTE,
@@ -12,7 +10,8 @@ import {
   LIGHT_THEME,
   HOME_PAGE_ROUTE_CLASS,
 } from '@/constants'
-
+import Loader from '@/components/Loader'
+import ErrorBoundary from '@/containers/ErrorBoundary'
 
 import GlobalStyles from '@/globalStyles'
 import lightTheme from '@/themes/lightTheme'

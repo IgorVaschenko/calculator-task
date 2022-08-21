@@ -7,5 +7,5 @@ export const HomeWrapperPage = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    animation: ${show} 1s linear 1 alternate;
+    animation: ${show} 1.5s linear 1 alternate;
 `

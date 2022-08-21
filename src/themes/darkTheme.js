@@ -39,7 +39,7 @@ export default {
   width: [75, 100, 300, 400, 450, 500, 600, 700, 800, 900, 1000, 1100, 90],
   height: [30, 50, 75, 100, 300, 400, 500, 600, 700, 800, 1000, 90],
   fontSize: [1, 1.25, 1.5, 1.75, 2, 2.5, 3, 4],
-  spaces: [0, 4, 8, 16, 20, 32, 45, 64, 128],
+  spaces: [0, 4, 8, 16, 20, 32, 45, 64, 128, 150],
   fontSizes: [12, 14, 16, 20, 24, 32, 40, 56, 72, 80],
   colors: {
     textColorHeader: 'white',
@@ -55,6 +55,7 @@ export default {
     border: '#000000',
     history: '#ffffff',
     textColorHistory: '#ffffff',
+    arrowsColor: '#ffffff',
   },
 }
 

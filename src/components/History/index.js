@@ -1,10 +1,10 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 
 import ControlPanel from '@/containers/ControlPanel'
 import HistoryListener from '@/containers/HistoryListener'
 
 import { History } from '@/components/History/components'
+import TrashCan from '@/containers/TrashCan'
 
 export default () => {
     return (
@@ -13,6 +13,7 @@ export default () => {
                 History
                 <HistoryListener />
             </History>
+            <TrashCan />
         </ControlPanel>
     )
 }

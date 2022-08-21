@@ -1,32 +1,21 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types';
-import { useDispatch } from 'react-redux'
+import PropTypes from 'prop-types'
 
-import { CLEAR_HISTORY } from '@/constants'
-
-import { ControlPanelWrap, OpenClose, Basket, HiddenPart } from '@/containers/ControlPanel/components'
+import { ControlPanelWrap, OpenClose, HiddenPart } from '@/containers/ControlPanel/components'
 
 const ControlPanel = ({ children }) => {
+
     const [panelActive, setPanelActive] = useState(true)
-    const [animated, setAnimated] = useState()
-
-    const dispatch = useDispatch()
-
-    const handleClear = () => {
-        dispatch({ type: CLEAR_HISTORY })
-    }
 
     const handleClick = () => {
         setPanelActive(!panelActive)
-        setAnimated(panelActive)
     }
 
     return (
-        <ControlPanelWrap open={panelActive}>
-            <OpenClose onClick={handleClick} $animated={animated} />
+        <ControlPanelWrap >
+            <OpenClose onClick={handleClick} $animated={panelActive} />
             <HiddenPart open={panelActive}>
                 {children}
-                <Basket onClick={handleClear} />
             </HiddenPart>
         </ControlPanelWrap>
     )
@@ -35,5 +24,5 @@ const ControlPanel = ({ children }) => {
 export default ControlPanel
 
 ControlPanel.propTypes = {
-    children: PropTypes.node.isRequired
-};
+    children: PropTypes.node.isRequired,
+}

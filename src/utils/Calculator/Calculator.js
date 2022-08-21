@@ -6,7 +6,6 @@ import {
     multiplication,
     numbersWithoutZero,
 } from "@/utils/Calculator/simpleOperations"
-
 import { calcValReplace, calcValReturn } from "@/utils/Calculator/calcValReturn"
 
 

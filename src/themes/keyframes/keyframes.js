@@ -13,10 +13,19 @@ const spinBack = keyframes`
       transform: rotate(180deg);
     }
     100% {
-      transform: rotate(0deg);
+      transform: rotate(360deg);
+    }
+`
+const show = keyframes`
+    0% {
+       opacity:0;
+    }
+    100% {
+       opacity:1;
     }
 `
 export {
   spin,
-  spinBack
+  spinBack,
+  show,
 }

@@ -8,7 +8,7 @@ export default () => {
   return (
     <Loader
       type="Bars"
-      color='black'
+      color="black"
       height={LOADER_SIZE}
       width={LOADER_SIZE}
     />

@@ -1,5 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 import { HomeWrapperPage } from "@/components/WrapperPage/components"
 
@@ -15,7 +15,7 @@ const WrapperPage = ({ children }) => {
 export default WrapperPage
 
 WrapperPage.propTypes = {
-    children: PropTypes.node.isRequired
-};
+    children: PropTypes.node.isRequired,
+}
 
 

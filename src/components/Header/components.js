@@ -1,7 +1,4 @@
-import { Link } from 'react-router-dom'
-
 import styled from 'styled-components'
-
 
 export const Header = styled.div`
     width: ${props => props.theme.width[1]}%;
@@ -16,21 +13,4 @@ export const Header = styled.div`
 `
 export const CalculatorApp = styled.div`
     color: ${props => props.theme.colors.textColorHeader};
-`
-
-export const Uls = styled.ul`
-    list-style-type: none;
-`
-export const Lis = styled.li`
-    color: ${props => props.theme.colors.textColorHeader};
-    display: inline-block;
-`
-
-export const LinkUp = styled(Link)`
-    color: ${props => props.theme.colors.textColorHeader};
-    textDecoration: none;
-    
-    & : hover {
-        textDecoration: underline;
-    }
 `

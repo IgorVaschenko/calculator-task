@@ -5,7 +5,7 @@ import {
     BTN_DELETE,
     BTN_SIGN_CHANGE,
     CLEAR_HISTORY,
-    BTN_DELETE_EXP_VAL
+    BTN_DELETE_EXP_VAL,
 } from "@/constants"
 
 import run from "@/utils/Calculator/Calculator"
@@ -61,6 +61,7 @@ const operations = (state = initialState, { type, payload }) => {
             return {
                 ...state,
                 history: [],
+                fieldValue: '',
             }
         default:
             return state

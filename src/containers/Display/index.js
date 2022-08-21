@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import InputExpression from '@/containers/InputExpression'
 import currentValue from '@/utils/expressionBuilder/currentValue'
 
-import { DisplayWrapper, InputValue } from '@/components/Display/components'
+import { DisplayWrapper, InputValue } from '@/containers/Display/components'
 
 export default () => {
 
@@ -13,12 +13,9 @@ export default () => {
     return (
         <DisplayWrapper>
             <InputExpression />
-            <InputValue
-                type="text"
-                value={currentValue(value)}
-                placeholder="0"
-                onChange={event => event}
-            />
+            <InputValue>
+                {currentValue(value) || '0'}
+            </InputValue>
         </DisplayWrapper>
     )
 }

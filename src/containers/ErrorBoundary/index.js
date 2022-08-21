@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
 
     render() {
         const { error } = this.state
-        const { children } = this.props;
+        const { children } = this.props
         if (error) {
             return (
                 <PageLayout>

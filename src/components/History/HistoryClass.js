@@ -2,6 +2,7 @@ import React from 'react'
 
 import ControlPanel from '@/containers/ControlPanel'
 import HistoryListener from '@/containers/HistoryListener'
+import TrashCan from '@/containers/TrashCan'
 
 import { History } from '@/components/History/components'
 
@@ -13,6 +14,7 @@ class HistoryCl extends React.Component {
                     History
                     <HistoryListener />
                 </History>
+                <TrashCan />
             </ControlPanel>
         )
     }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Display from '@/components/Display'
+import Display from '@/containers/Display'
 import History from '@/components/History'
 import CalculatorPanel from '@/containers/CalculatorPanel'
 

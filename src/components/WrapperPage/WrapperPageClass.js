@@ -1,13 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
 import { HomeWrapperPage } from "@/components/WrapperPage/components"
 
 class WrapperPageCl extends React.Component {
     render() {
+        const { children } = this.props
         return (
             <HomeWrapperPage >
-                {this.props.children}
+                {children}
             </HomeWrapperPage>
         )
     }
@@ -16,5 +17,5 @@ class WrapperPageCl extends React.Component {
 export default WrapperPageCl
 
 WrapperPageCl.propTypes = {
-    children: PropTypes.node.isRequired
-};
+    children: PropTypes.node.isRequired,
+}

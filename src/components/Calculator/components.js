@@ -8,12 +8,13 @@ export const CalcAndHistory = styled.div`
 `
 
 export const CalculatorWrapper = styled.div`
-    margin-right: ${props => props.theme.spaces[4]}px;
 `
 
 export const ButtonsWrapper = styled.div`
-    width: ${props => props.theme.width[9]}px;
-    margin: ${props => props.theme.spaces[4]}px auto;
+    width: ${props => props.theme.width[10]}px;
+    margin: ${props => props.theme.spaces[4]}px ${props => props.theme.spaces[0]}px;
+    padding: ${props => props.theme.spaces[0]}px ${props => props.theme.spaces[0]}px;
+    border-right: 1px solid ${props => props.theme.colors.border};
     display: flex;
     flex-wrap: wrap; 
     align-content: flex-end;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { btns } from '@/constants'
@@ -12,11 +12,11 @@ const CalculatorPanel = () => {
     const dispatch = useDispatch()
     const fieldValue = useSelector(state => state.operations.fieldValue)
 
-    const handleClick = () => {
+    const handleClick = useCallback(() => {
         btns.map(btn => {
             btn.key === event.target.id && dispatch(btn)
         })
-    }
+    }, [btns])
 
     useEffect(() => {
         addEventListener('keyup', () => KeyPad(event, dispatch))
@@ -33,14 +33,14 @@ const CalculatorPanel = () => {
                         onClick={handleClick}
                     >
                         {btn.payload}
-                    </CalcButton>
+                      </CalcButton>
                     : <EqualButton
                         id={btn.key}
                         key={btn.payload}
                         onClick={handleClick}
                     >
                         {btn.payload}
-                    </EqualButton>
+                      </EqualButton>
             ))}
         </ButtonsWrapper>
     )

@@ -10,6 +10,8 @@ export const chechkingAddValue = (state, payload) => {
 
     if (stateValue[0] === '0' && stateLength === 1 && payload === '0') return state
 
+    if (stateLength === 0 && payload === ')') return state
+
     if (payload === '.' && stateFloatOperations && typeof (stateValue[stateLength - 1]) === 'number') return state
 
     if (payload === '.' && stateIntOperations) return state
@@ -35,7 +37,7 @@ export const chechkingBtnCalc = state => {
 
     if (stateLength === 0 && !stateValue[0]) return state
 
-    if (stateValueHist[stateLengthHist - 1] === stateValue) return state
+    if (stateLengthHist && stateValueHist[stateLengthHist - 1].includes(`= ${stateValue}`)) return state
 
     if (stateLength === 1 && stateValue[0] === '.') return state
 } 
