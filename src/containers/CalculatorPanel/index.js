@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect } from 'react'
+import React, { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { btns } from '@/constants'
-import { KeyPad } from '@/components/KeyPad'
+import KeyPressListener from '@/containers/KeyPressListener'
 
 import { ButtonsWrapper, CalcButton, EqualButton } from '@/components/Calculator/components'
 
@@ -18,31 +18,30 @@ const CalculatorPanel = () => {
         })
     }, [btns])
 
-    useEffect(() => {
-        addEventListener('keyup', () => KeyPad(event, dispatch))
-        return removeEventListener('keyup', () => KeyPad(event, dispatch))
-    }, [])
-
     return (
-        <ButtonsWrapper>
-            {btns.map((btn, index) => (
-                btn.payload !== '='
-                    ? <CalcButton
-                        id={btn.key}
-                        key={btn.payload}
-                        onClick={handleClick}
-                    >
-                        {btn.payload}
-                      </CalcButton>
-                    : <EqualButton
-                        id={btn.key}
-                        key={btn.payload}
-                        onClick={handleClick}
-                    >
-                        {btn.payload}
-                      </EqualButton>
-            ))}
-        </ButtonsWrapper>
+        <KeyPressListener>
+            <ButtonsWrapper>
+                {btns.map((btn, index) => (
+                    btn.payload !== '='
+                        ? <CalcButton
+                            id={btn.key}
+                            key={btn.payload}
+                            onClick={handleClick}
+                            tabIndex={-1}
+                        >
+                            {btn.payload}
+                        </CalcButton>
+                        : <EqualButton
+                            id={btn.key}
+                            key={btn.payload}
+                            onClick={handleClick}
+                            tabIndex={-1}
+                        >
+                            {btn.payload}
+                        </EqualButton>
+                ))}
+            </ButtonsWrapper>
+        </KeyPressListener>
     )
 }
 
