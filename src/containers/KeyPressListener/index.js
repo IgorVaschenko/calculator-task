@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
 
@@ -12,11 +12,12 @@ const KeyPressListener = ({ children }) => {
     const dispatch = useDispatch()
     const ref = useRef()
 
-    const handleKeyDown = (event) => {
+    const handleKeyDown = useCallback(() => {
         btns.map(btn => {
             btn.key === event.key && KeyPad(event, dispatch)
         })
-    }
+        ref.current.focus();
+    }, [btns, event])
 
     useEffect(() => {
         ref.current.focus();

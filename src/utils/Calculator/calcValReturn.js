@@ -1,5 +1,5 @@
 export const calcValReturn = currentValue => {
-    return currentValue === '' ? '.'
+    return currentValue === '' ? currentValue
         : parseFloat(currentValue) === parseInt(currentValue) && currentValue !== ''
             ? currentValue.toString()
             : (+currentValue).toFixed(3).toString()

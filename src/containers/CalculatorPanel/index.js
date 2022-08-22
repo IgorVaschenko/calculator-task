@@ -10,7 +10,6 @@ import { ButtonsWrapper, CalcButton, EqualButton } from '@/components/Calculator
 const CalculatorPanel = () => {
 
     const dispatch = useDispatch()
-    const fieldValue = useSelector(state => state.operations.fieldValue)
 
     const handleClick = useCallback(() => {
         btns.map(btn => {
@@ -27,7 +26,7 @@ const CalculatorPanel = () => {
                             id={btn.key}
                             key={btn.payload}
                             onClick={handleClick}
-                            tabIndex={-1}
+                            tabIndex={0}
                         >
                             {btn.payload}
                         </CalcButton>

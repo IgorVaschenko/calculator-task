@@ -35,6 +35,10 @@ export const CalcButton = styled.button`
     &: hover{   
         background-color: ${props => props.theme.colors.buttonsColorHover};
     }
+    
+    &:focus {
+        outline: none;
+    }   
 `
 
 export const EqualButton = styled.button` 
@@ -50,5 +54,9 @@ export const EqualButton = styled.button`
     
     &: hover{   
         background-color: ${props => props.theme.colors.buttonsColorHover};
+    }
+
+    &:focus {
+        outline: none;
     }
 `
