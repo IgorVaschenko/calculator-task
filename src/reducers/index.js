@@ -1,7 +1,9 @@
 import { combineReducers } from 'redux'
 
-import example from './example'
+import operations from '@/reducers/operations'
+import themes from '@/reducers/themes'
 
 export const rootReducer = combineReducers({
-  example,
+  operations,
+  themes,
 })
