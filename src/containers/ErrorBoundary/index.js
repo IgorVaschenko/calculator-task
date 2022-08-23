@@ -22,7 +22,9 @@ class ErrorBoundary extends React.Component {
         if (error) {
             return (
                 <PageLayout>
-                    <Error>{error}</Error>
+                    <Error>
+                        {error}
+                    </Error>
                 </PageLayout>
             )
         } else {
